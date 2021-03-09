@@ -35,6 +35,7 @@ namespace webAPI.Controllers
             _hub.Clients.All.SendAsync("transfernotepaddata", notepad);
             return Ok(new { Message = "Request Completed" });
         }
+        
         [DllImport("User32")]
         private static extern int ShowWindow(int hwnd, int nCmdShow);
         [DllImport("user32")]
