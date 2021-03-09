@@ -1,0 +1,31 @@
+
+<div *ngIf="notepad && isOpen">
+  <div class="note-container">
+    <div class="notepad"
+         [style.width.px]="notepad.width - 15"
+         [style.height.px]="notepad.height - 7"
+         [style.margin-left.px]="notepad.x"
+         [style.margin-top.px]="notepad.y">
+      <span class="icon">
+      </span>
+      <span class="title">Sin título</span>
+      <span class="material-icons close-icon" (click)="closeNotepad()">
+        clear
+      </span>
+      <span class="line"></span>
+    </div>
+    <div class="controls">
+      <p>width: {{width.value}}</p>
+      <mat-slider #width min="124" max="1000" step="1" tickInterval="1" (input)="onWidthChange($event.value)" [(value)]="notepad.width" thumbLabel></mat-slider>
+      <p>height: {{height.value}}</p>
+      <mat-slider #height min="30" max="1000" step="1" tickInterval="1" (input)="onHeightChange($event.value)" [(value)]="notepad.height" thumbLabel></mat-slider>
+      <p>x: {{x.value}}</p>
+      <mat-slider #x min="0" max="1000" step="1" tickInterval="1" (input)="onXChange($event.value)" [(value)]="notepad.x" thumbLabel></mat-slider>
+      <p>y: {{y.value}}</p>
+      <mat-slider #y min="0" max="1000" step="1" tickInterval="1" (input)="onYChange($event.value)" [(value)]="notepad.y" thumbLabel></mat-slider>
+    </div>
+  </div>
+</div>
+<span *ngIf="!isOpen" class="reload material-icons" (click)="reload()">
+  restore_page
+</span>

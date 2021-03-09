@@ -1,0 +1,65 @@
+.notepad{
+    position: relative;
+    background-color:white;
+    span.icon{
+        background-image: url(../../../assets/img/noteIcon.PNG);
+        position:absolute;
+        left:5px;
+        top:5px;
+        width: 20px;
+        height: 20px;
+        background-size:cover;
+    }
+    span.title{
+        position: absolute;
+        top: 7px;
+        left: 30px;
+        font-size: 13px;
+    }
+    span.close-icon{
+        position: absolute;
+        right: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom:5px;
+        font-size: 20px;
+        color:rgb(122, 122, 122);
+    }
+    span.close-icon:hover{
+        background-color:red;
+        color:white;
+        cursor: pointer;
+    }
+    span.line{
+        position:absolute;
+        top: 30px;
+        border-bottom:1px solid rgb(236, 236, 236);
+        width: 100%;
+    }
+}
+.controls {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 50px;
+  background: rgb(75, 42, 165);
+  color: white;
+  border-radius: 5px;
+}
+.reload{
+    background-color:rgb(75, 42, 165);
+    color:aquamarine;
+    padding:30px;
+    font-size: 70px;
+    border-radius: 50%;
+    cursor:pointer;
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+    box-shadow: 0px 10px 0px rgb(108, 77, 194);
+}
+.reload:active{
+    transition:.2s;    
+    box-shadow: 0px 0px 0px rgb(108, 77, 194);
+    transform:translate(calc(50vw - 50%), calc(50vh - 50% + 10px));
+    user-select: none;
+}
